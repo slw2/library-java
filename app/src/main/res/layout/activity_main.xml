@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/myBackground"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/welcome_to_the_library"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/library_menu_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/library_menu_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/select_an_option"
+        android:textColor="@color/yellowText"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/scrollview"
+        app:layout_constraintTop_toTopOf="@id/textView" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/library_menu_text"
+        >
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/library_menu_text"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/library_menu_text">
+
+            <RadioButton
+                android:id="@+id/list_all_users"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/list_all_users" />
+
+            <RadioButton
+                android:id="@+id/list_all_books"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/list_all_books" />
+
+            <RadioButton
+                android:id="@+id/user_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/search_for_a_user" />
+
+            <RadioButton
+                android:id="@+id/book_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/search_for_a_book" />
+
+            <RadioButton
+                android:id="@+id/borrow_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/borrow_a_book" />
+
+            <RadioButton
+                android:id="@+id/return_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/return_a_book"
+                tools:layout_editor_absoluteX="203dp"
+                tools:layout_editor_absoluteY="318dp" />
+
+            <RadioButton
+                android:id="@+id/check_loans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/check_my_loans"
+                tools:layout_editor_absoluteX="213dp"
+                tools:layout_editor_absoluteY="296dp" />
+
+            <RadioButton
+                android:id="@+id/add_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/add_a_user"
+                tools:layout_editor_absoluteX="104dp"
+                tools:layout_editor_absoluteY="487dp" />
+
+            <RadioButton
+                android:id="@+id/remove_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/remove_a_user"
+                tools:layout_editor_absoluteX="203dp"
+                tools:layout_editor_absoluteY="350dp" />
+
+            <RadioButton
+                android:id="@+id/add_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/add_a_book"
+                tools:layout_editor_absoluteX="89dp"
+                tools:layout_editor_absoluteY="308dp" />
+
+            <RadioButton
+                android:id="@+id/remove_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/remove_a_book"
+                tools:layout_editor_absoluteX="157dp"
+                tools:layout_editor_absoluteY="351dp" />
+
+            <RadioButton
+                android:id="@+id/list_books_on_loan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/list_books_on_loan"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="383dp" />
+
+            <RadioButton
+                android:id="@+id/list_books_not_loaned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/list_books_not_on_loan"
+                tools:layout_editor_absoluteX="44dp"
+                tools:layout_editor_absoluteY="283dp" />
+
+            <RadioButton
+                android:id="@+id/list_users_with_loans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/list_users_with_loans"
+                tools:layout_editor_absoluteX="157dp"
+                tools:layout_editor_absoluteY="476dp" />
+
+        </RadioGroup>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
